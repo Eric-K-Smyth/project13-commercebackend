@@ -4,6 +4,9 @@ DROP DATABASE IF EXISTS ecommerce_db;
 -- CREATE DATABASE
 CREATE DATABASE ecommerce_db;
 
+-- Specify the database to use
+USE ecommerce_db;
+
 -- Create the Category table
 CREATE TABLE Category (
   id INT AUTO_INCREMENT PRIMARY KEY,
