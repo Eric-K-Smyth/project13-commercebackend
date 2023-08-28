@@ -27,4 +27,12 @@ Category.init(
   }
 );
 
+// Add the association
+Category.associate = (models) => {
+  Category.hasMany(models.Product, {
+    foreignKey: 'category_id',
+    onDelete: 'CASCADE', // This ensures that if a category is deleted, associated products are also deleted
+  });
+};
+
 module.exports = Category;
