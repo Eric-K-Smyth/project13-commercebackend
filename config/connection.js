@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Sequelize = require('sequelize');
 
 let sequelize;
@@ -20,5 +21,8 @@ if (process.env.JAWSDB_URL) {
     }
   );
 }
+console.log('DB_NAME:', process.env.DB_NAME);
+console.log('DB_USER:', process.env.DB_USER);
+console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
 
 module.exports = sequelize;
